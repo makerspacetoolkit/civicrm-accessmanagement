@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="iso-8859-1" ?>
+
+<table>
+  <base>CRM/Accessmanagement</base>
+  <class>UserAcls</class>
+  <name>civicrm_mstk_user_acls</name>
+  <comment>FIXME</comment>
+  <log>true</log>
+
+  <field>
+    <name>id</name>
+    <type>int unsigned</type>
+    <required>true</required>
+    <comment>Unique User Acl Mapping ID</comment>
+  </field>
+  <primaryKey>
+    <name>id</name>
+    <autoincrement>true</autoincrement>
+  </primaryKey>
+
+  <field>
+    <name>contact_id</name>
+    <type>int unsigned</type>
+    <comment>FK to Contact</comment>
+  </field>
+  <foreignKey>
+    <name>contact_id</name>
+    <table>civicrm_contact</table>
+    <key>id</key>
+    <onDelete>CASCADE</onDelete>
+  </foreignKey>
+
+  <field>
+    <name>aco</name>
+    <type>int unsigned</type>
+    <required>true</required>
+    <comment>FK to Access Points</comment>
+  </field>
+  <foreignKey>
+    <name>aco</name>
+    <table>civicrm_mstk_access_points</table>
+    <key>id</key>
+    <onDelete>CASCADE</onDelete>
+  </foreignKey>
+  
+    <field>
+      <name>status_id</name>
+      <type>int unsigned</type>
+      <required>true</required>
+    </field>
+
+    <field>
+      <name>certification_date</name>
+      <type>date</type>
+      <required>true</required>
+    </field>
+
+    <field>
+    <name>cert_by_id</name>
+    <type>int unsigned</type>
+    <comment>FK to Contact</comment>
+  </field>
+  <foreignKey>
+    <name>cert_by_id</name>
+    <table>civicrm_contact</table>
+    <key>id</key>
+  </foreignKey>
+
+    <field>
+      <name>notes</name>
+      <type>varchar</type>
+      <length>255</length>
+      <default>null</default>
+    </field>
+
+
+</table>

@@ -1,0 +1,95 @@
+<?xml version="1.0"?>
+<menu>
+  <item>
+    <path>civicrm/contact/view/useracls</path>
+    <page_callback>CRM_Accessmanagement_Page_UserAcls</page_callback>
+    <title>UserAcls</title>
+    <access_arguments>access CiviCRM</access_arguments>
+  </item>
+  <item>
+    <path>civicrm/contact/view/useracls/view</path>
+    <page_callback>CRM_Accessmanagement_Form_UserAclsView</page_callback>
+    <title>UserAclsView</title>
+    <access_arguments>access CiviCRM</access_arguments>
+  </item>
+  <item>
+    <path>civicrm/mstk/accesspoints</path>
+    <page_callback>CRM_Accessmanagement_Page_AccessPoints</page_callback>
+    <title>AccessPoints</title>
+    <access_arguments>access CiviCRM</access_arguments>
+  </item>
+  <item>
+    <path>civicrm/mstk/groupacls</path>
+    <page_callback>CRM_Accessmanagement_Page_GroupAcls</page_callback>
+    <title>GroupAcls</title>
+    <access_arguments>access CiviCRM</access_arguments>
+  </item>
+  <item>
+    <path>civicrm/ajax/groupaclslist</path>
+    <page_callback>CRM_Accessmanagement_Page_AJAX::getGroupAcls</page_callback>
+    <access_arguments>access CiviCRM</access_arguments>
+  </item>
+  <item>
+    <path>civicrm/ajax/useraclslist</path>
+    <page_callback>CRM_Accessmanagement_Page_AJAX::getUserAcls</page_callback>
+    <access_arguments>access CiviCRM</access_arguments>
+  </item>
+  <item>
+    <path>civicrm/ajax/accesspointslist</path>
+    <page_callback>CRM_Accessmanagement_Page_AJAX::getAccessPoints</page_callback>
+    <access_arguments>access CiviCRM</access_arguments>
+  </item>
+  <item>
+    <path>civicrm/ajax/errorcodeslist</path>
+    <page_callback>CRM_Accessmanagement_Page_AJAX::getErrorCodes</page_callback>
+    <access_arguments>access CiviCRM</access_arguments>
+  </item>
+  <item>
+    <path>civicrm/useracls/add</path>
+    <page_callback>CRM_Accessmanagement_Form_UserAclsAdd</page_callback>
+    <title>UserAclsAdd</title>
+    <access_arguments>access CiviCRM</access_arguments>
+  </item>
+  <item>
+    <path>civicrm/groupacls/add</path>
+    <page_callback>CRM_Accessmanagement_Form_GroupAclsAdd</page_callback>
+    <title>GroupAclsAdd</title>
+    <access_arguments>access CiviCRM</access_arguments>
+  </item>
+  <item>
+    <path>civicrm/accesspoints/add</path>
+    <page_callback>CRM_Accessmanagement_Form_AccessPointsAdd</page_callback>
+    <title>AccessPointsAdd</title>
+    <access_arguments>access CiviCRM</access_arguments>
+  </item>
+  <item>
+    <path>civicrm/mstk/accesspoints/view</path>
+    <page_callback>CRM_Accessmanagement_Form_AccessPointView</page_callback>
+    <title>AccessPointView</title>
+    <access_arguments>access CiviCRM</access_arguments>
+  </item>
+  <item>
+    <path>civicrm/mstk/accesspoints/errorcodes</path>
+    <page_callback>CRM_Accessmanagement_Page_ErrorCodes</page_callback>
+    <title>ErrorCodes</title>
+    <access_arguments>access CiviCRM</access_arguments>
+  </item>
+  <item>
+    <path>civicrm/mstk/accesspoints/errorcodes/add</path>
+    <page_callback>CRM_Accessmanagement_Form_ErrorCodesAdd</page_callback>
+    <title>ErrorCodesAdd</title>
+    <access_arguments>access CiviCRM</access_arguments>
+  </item>
+  <item>
+    <path>civicrm/mstk/accesspoints/errorcodes/view</path>
+    <page_callback>CRM_Accessmanagement_Form_ErrorCodesView</page_callback>
+    <title>ErrorCodesView</title>
+    <access_arguments>access CiviCRM</access_arguments>
+  </item>
+  <item>
+    <path>civicrm/mstk/groupacls/view</path>
+    <page_callback>CRM_Accessmanagement_Form_GroupAclsView</page_callback>
+    <title>GroupAclsView</title>
+    <access_arguments>access CiviCRM</access_arguments>
+  </item>
+</menu>

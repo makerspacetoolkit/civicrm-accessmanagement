@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="iso-8859-1" ?>
+
+<table>
+  <base>CRM/Accessmanagement</base>
+  <class>ApErrorCodes</class>
+  <name>civicrm_mstk_ap_error_codes</name>
+  <comment>FIXME</comment>
+  <log>true</log>
+
+  <field>
+    <name>id</name>
+    <type>int unsigned</type>
+    <required>true</required>
+    <comment>Unique ApErrorCodes ID</comment>
+  </field>
+  <primaryKey>
+    <name>id</name>
+    <autoincrement>true</autoincrement>
+  </primaryKey>
+
+  <field>
+    <name>aco</name>
+    <type>int unsigned</type>
+    <required>true</required>
+    <comment>FK to Access Points</comment>
+  </field>
+  <foreignKey>
+    <name>aco</name>
+    <table>civicrm_mstk_access_points</table>
+    <key>id</key>
+    <onDelete>CASCADE</onDelete>
+  </foreignKey>
+  
+  <field>
+    <name>error_key</name>
+     <type>varchar</type>
+     <length>8</length>
+     <required>true</required>
+  </field>
+
+   <field>
+     <name>error_value</name>
+      <type>varchar</type>
+      <length>255</length>
+     <required>true</required>
+   </field>
+
+</table>

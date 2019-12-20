@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="iso-8859-1" ?>
+
+<table>
+  <base>CRM/Accessmanagement</base>
+  <class>AccessPoints</class>
+  <name>civicrm_mstk_access_points</name>
+  <comment>Things you want to control.</comment>
+  <log>true</log>
+
+  <field>
+    <name>id</name>
+    <type>int unsigned</type>
+    <required>true</required>
+    <comment>Unique AccessPoints ID</comment>
+  </field>
+  <primaryKey>
+    <name>id</name>
+    <autoincrement>true</autoincrement>
+  </primaryKey>
+
+  <field>
+    <name>parent_id</name>
+    <type>int unsigned</type>
+    <default>null</default>
+  </field>
+
+  <field>
+    <name>ap_name</name>
+    <type>varchar</type>
+    <length>255</length>
+    <required>true</required>
+    <comment>Full name</comment>
+  </field>
+  <index>
+    <name>ap_name</name>
+    <fieldName>ap_name</fieldName>
+    <unique>true</unique>
+  </index>
+
+  <field>
+    <name>ap_short_name</name>
+    <type>varchar</type>
+    <length>255</length>
+    <comment>Concise name for client view.</comment>
+  </field>
+
+  <field>
+    <name>ip_address</name>
+    <type>varchar</type>
+    <length>39</length>
+    <comment>v4 or v6</comment>
+  </field>
+  <index>
+    <name>ip_address</name>
+    <fieldName>ip_address</fieldName>
+    <unique>true</unique>
+  </index>
+
+  <field>
+    <name>mac_address</name>
+    <type>varchar</type>
+    <length>17</length>
+  </field>
+  <index>
+    <name>mac_address</name>
+    <fieldName>mac_address</fieldName>
+    <unique>true</unique>
+  </index>
+
+  <field>
+    <name>member_rate</name>
+    <type>decimal</type>
+    <length>14,9</length>
+    <default>0</default>
+  </field>
+
+  <field>
+    <name>non_member_rate</name>
+    <type>decimal</type>
+    <length>14,9</length>
+    <default>0</default>
+  </field>
+
+  <field>
+    <name>idle_timeout</name>
+    <type>int unsigned</type>
+    <default>null</default>
+  </field>
+
+  <field>
+    <name>maintenance_mode</name>
+    <type>boolean</type>
+    <default>false</default>
+    <required>true</required>
+  </field>
+
+</table>

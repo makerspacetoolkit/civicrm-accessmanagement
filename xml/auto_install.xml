@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="iso-8859-1" ?>
+
+<CustomData>
+  <OptionGroups>
+    <OptionGroup>
+      <name>accessmanagement_status_type</name>
+      <title>Access Management Status Type</title>
+      <data_type>String</data_type>
+      <is_reserved>1</is_reserved>
+      <is_active>1</is_active>
+    </OptionGroup>
+    <OptionGroup>
+      <name>accessmanagement_default_error_codes</name>
+      <title>Access Management Default Error Messages</title>
+      <data_type>String</data_type>
+      <is_reserved>1</is_reserved>
+      <is_active>1</is_active>
+    </OptionGroup>
+  </OptionGroups>
+  <OptionValues>
+    <OptionValue>
+      <label>Active</label>
+      <name>Active</name>
+      <value>1</value>
+      <is_default>0</is_default>
+      <weight>1</weight>
+      <is_optgroup>0</is_optgroup>
+      <is_reserved>0</is_reserved>
+      <is_active>1</is_active>
+      <option_group_name>accessmanagement_status_type</option_group_name>
+    </OptionValue>
+    <OptionValue>
+      <label>Expired</label>
+      <name>Expired</name>
+      <value>2</value>
+      <is_default>0</is_default>
+      <weight>2</weight>
+      <is_optgroup>0</is_optgroup>
+      <is_reserved>0</is_reserved>
+      <is_active>1</is_active>
+      <option_group_name>accessmanagement_status_type</option_group_name>
+    </OptionValue>
+    <OptionValue>
+      <label>Revoked</label>
+      <name>Revoked</name>
+      <value>3</value>
+      <is_default>0</is_default>
+      <weight>3</weight>
+      <is_optgroup>0</is_optgroup>
+      <is_reserved>0</is_reserved>
+      <is_active>1</is_active>
+      <option_group_name>accessmanagement_status_type</option_group_name>
+    </OptionValue>
+    <OptionValue>
+      <label>x00</label>
+      <name>x00</name>
+      <value>Everything is awesome</value>
+      <is_default>0</is_default>
+      <weight>1</weight>
+      <is_optgroup>0</is_optgroup>
+      <is_reserved>0</is_reserved>
+      <is_active>1</is_active>
+      <option_group_name>accessmanagement_default_error_codes</option_group_name>
+    </OptionValue>
+    <OptionValue>
+      <label>x01</label>
+      <name>x01</name>
+      <value>Sorry, you're not certified to use this tool.</value>
+      <is_default>0</is_default>
+      <weight>2</weight>
+      <is_optgroup>0</is_optgroup>
+      <is_reserved>0</is_reserved>
+      <is_active>1</is_active>
+      <option_group_name>accessmanagement_default_error_codes</option_group_name>
+    </OptionValue>
+    <OptionValue>
+      <label>x02</label>
+      <name>x02</name>
+      <value>Sorry, non-members cannot use this tool now.</value>
+      <is_default>0</is_default>
+      <weight>3</weight>
+      <is_optgroup>0</is_optgroup>
+      <is_reserved>0</is_reserved>
+      <is_active>1</is_active>
+      <option_group_name>accessmanagement_default_error_codes</option_group_name>
+    </OptionValue>
+    <OptionValue>
+      <label>x03</label>
+      <name>x03</name>
+      <value>You have an insuffucient balance to begin your session. Please fund your account to greater that the minimum per-diem charge.</value>
+      <is_default>0</is_default>
+      <weight>4</weight>
+      <is_optgroup>0</is_optgroup>
+      <is_reserved>0</is_reserved>
+      <is_active>1</is_active>
+      <option_group_name>accessmanagement_default_error_codes</option_group_name>
+    </OptionValue>
+    <OptionValue>
+      <label>x04</label>
+      <name>x04</name>
+      <value>You have a negative balance. Please fund your account.</value>
+      <is_default>0</is_default>
+      <weight>5</weight>
+      <is_optgroup>0</is_optgroup>
+      <is_reserved>0</is_reserved>
+      <is_active>1</is_active>
+      <option_group_name>accessmanagement_default_error_codes</option_group_name>
+    </OptionValue>
+    <OptionValue>
+      <label>x80</label>
+      <name>x80</name>
+      <value>This card cannot be found in our system.</value>
+      <is_default>0</is_default>
+      <weight>6</weight>
+      <is_optgroup>0</is_optgroup>
+      <is_reserved>0</is_reserved>
+      <is_active>1</is_active>
+      <option_group_name>accessmanagement_default_error_codes</option_group_name>
+    </OptionValue>
+    <OptionValue>
+      <label>x81</label>
+      <name>x81</name>
+      <value>Who are you?!?</value>
+      <is_default>0</is_default>
+      <weight>7</weight>
+      <is_optgroup>0</is_optgroup>
+      <is_reserved>0</is_reserved>
+      <is_active>1</is_active>
+      <option_group_name>accessmanagement_default_error_codes</option_group_name>
+    </OptionValue>
+    <OptionValue>
+      <label>x82</label>
+      <name>x82</name>
+      <value>Intercommunication Error 1</value>
+      <is_default>0</is_default>
+      <weight>8</weight>
+      <is_optgroup>0</is_optgroup>
+      <is_reserved>0</is_reserved>
+      <is_active>1</is_active>
+      <option_group_name>accessmanagement_default_error_codes</option_group_name>
+    </OptionValue>
+    <OptionValue>
+      <label>x83</label>
+      <name>x83</name>
+      <value>We're having trouble accessing your account because of Internet problems. :-(</value>
+      <is_default>0</is_default>
+      <weight>9</weight>
+      <is_optgroup>0</is_optgroup>
+      <is_reserved>0</is_reserved>
+      <is_active>1</is_active>
+      <option_group_name>accessmanagement_default_error_codes</option_group_name>
+    </OptionValue>
+    </OptionValues>
+</CustomData>
