@@ -22,7 +22,7 @@
     <ver>4.7</ver>
     <ver>5.0</ver>
   </compatibility>
-  <comments>This is an enxtension intended to help makerspaces manage their equipment and doors.</comments>
+  <comments>This is an extension intended to help makerspaces manage physical resources.</comments>
   <civix>
     <namespace>CRM/Accessmanagement</namespace>
   </civix>
