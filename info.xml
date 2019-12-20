@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<extension key="org.makerspacetoolkit.accessmanagement" type="module">
+<extension key="civicrm-accessmanagement" type="module">
   <file>accessmanagement</file>
   <name>Makerspace Toolkit Access Management</name>
   <description>Provides access control to physical resources.</description>
