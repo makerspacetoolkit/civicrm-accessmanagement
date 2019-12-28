@@ -62,6 +62,9 @@ class CRM_Accessmanagement_BAO_UserAcls extends CRM_Accessmanagement_DAO_UserAcl
         'option_group_id' => "accessmanagement_status_type",
         'value' => $userAcl['status_id'],
       ]);
+      if (!array_key_exists('notes', $userAcl)) {
+        $userAcl['notes'] = " ";
+      }
 
       $links = self::actionLinks();
       $userAcl['edit'] = CRM_Core_Action::formLink(
