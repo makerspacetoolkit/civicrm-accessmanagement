@@ -107,11 +107,22 @@
       <option_group_name>accessmanagement_default_error_codes</option_group_name>
     </OptionValue>
     <OptionValue>
+      <label>x10</label>
+      <name>x10</name>
+      <value>Unauthorized Access Point.</value>
+      <is_default>0</is_default>
+      <weight>6</weight>
+      <is_optgroup>0</is_optgroup>
+      <is_reserved>0</is_reserved>
+      <is_active>1</is_active>
+      <option_group_name>accessmanagement_default_error_codes</option_group_name>
+    </OptionValue>
+    <OptionValue>
       <label>x80</label>
       <name>x80</name>
       <value>This card cannot be found in our system.</value>
       <is_default>0</is_default>
-      <weight>6</weight>
+      <weight>7</weight>
       <is_optgroup>0</is_optgroup>
       <is_reserved>0</is_reserved>
       <is_active>1</is_active>
@@ -122,7 +133,7 @@
       <name>x81</name>
       <value>Who are you?!?</value>
       <is_default>0</is_default>
-      <weight>7</weight>
+      <weight>8</weight>
       <is_optgroup>0</is_optgroup>
       <is_reserved>0</is_reserved>
       <is_active>1</is_active>
@@ -133,7 +144,7 @@
       <name>x82</name>
       <value>Intercommunication Error 1</value>
       <is_default>0</is_default>
-      <weight>8</weight>
+      <weight>9</weight>
       <is_optgroup>0</is_optgroup>
       <is_reserved>0</is_reserved>
       <is_active>1</is_active>
@@ -144,7 +155,7 @@
       <name>x83</name>
       <value>We're having trouble accessing your account because of Internet problems. :-(</value>
       <is_default>0</is_default>
-      <weight>9</weight>
+      <weight>10</weight>
       <is_optgroup>0</is_optgroup>
       <is_reserved>0</is_reserved>
       <is_active>1</is_active>
