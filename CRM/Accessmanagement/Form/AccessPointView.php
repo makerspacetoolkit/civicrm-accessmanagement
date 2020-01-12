@@ -28,16 +28,16 @@ class CRM_Accessmanagement_Form_AccessPointView extends CRM_Core_Form {
       $this->macAddress = $accessPoint['mac_address'];
     }
     if (array_key_exists('member_rate', $accessPoint)) {
-    $this->memberRate = $accessPoint['member_rate'];
+      $this->memberRate = $accessPoint['member_rate'];
     }
     if (array_key_exists('non_member_rate', $accessPoint)) {
-    $this->nonMemberRate = $accessPoint['non_member_rate'];
+      $this->nonMemberRate = $accessPoint['non_member_rate'];
     }
-    if (array_key_exists('idle_timeout', $accessPoint)) {
+      if (array_key_exists('idle_timeout', $accessPoint)) {
     $this->idleTimeout = $accessPoint['idle_timeout'];
     }
     if (array_key_exists('parent_ap', $accessPoint)) {
-    $this->parentAp = $accessPoint['parent_ap'];
+      $this->parentAp = $accessPoint['parent_ap'];
     }
     $this->maintenanceMode = $accessPoint['maintenance_mode'];
     
