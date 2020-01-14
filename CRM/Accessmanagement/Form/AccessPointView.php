@@ -36,8 +36,8 @@ class CRM_Accessmanagement_Form_AccessPointView extends CRM_Core_Form {
       if (array_key_exists('idle_timeout', $accessPoint)) {
     $this->idleTimeout = $accessPoint['idle_timeout'];
     }
-    if (array_key_exists('parent_ap', $accessPoint)) {
-      $this->parentAp = $accessPoint['parent_ap'];
+    if (array_key_exists('parent_id', $accessPoint)) {
+      $this->parentAp = $accessPoint['parent_id'];
     }
     $this->maintenanceMode = $accessPoint['maintenance_mode'];
     
@@ -120,7 +120,7 @@ class CRM_Accessmanagement_Form_AccessPointView extends CRM_Core_Form {
       $defaults['idle_timeout'] = $this->idleTimeout; 
     }
     if (isset($this->parentAp)) {
-      $defaults['parent_ap'] = $this->parentAp; 
+      $defaults['parent_id'] = $this->parentAp; 
     }
     $defaults['maintenance_mode'] = $this->maintenanceMode;
 	  return $defaults;
