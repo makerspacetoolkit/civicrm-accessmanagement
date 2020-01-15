@@ -40,6 +40,14 @@
       <td>{$form.idle_timeout.html}</td>
     </tr>
     <tr>
+      <td>{$form.dev.label}</td>
+      <td>{$form.dev.html}</td>
+    </tr>
+    <tr>
+      <td>{$form.cmd.label}</td>
+      <td>{$form.cmd.html}</td>
+    </tr>
+    <tr>
       <td>{$form.parent_id.label}</td>
       <td>{$form.parent_id.html}</td>
     </tr>

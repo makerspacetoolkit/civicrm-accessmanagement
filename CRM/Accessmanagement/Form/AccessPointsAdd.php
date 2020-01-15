@@ -17,18 +17,27 @@ class CRM_Accessmanagement_Form_AccessPointsAdd extends CRM_Core_Form {
   public function buildQuickForm() {
 
     $this->addElement('checkbox',
+      'has_acd',
+      ts('Is there an access control device associated with the AP?'), NULL,
+     ['onclick' => "showAcdOptions()"],FALSE
+    );
+
+    $this->addElement('checkbox',
       'is_ap_group',
       ts('Is this s group of APs?'), NULL,
      ['onclick' => "hideStandaloneOptions()"],TRUE
     );
+
     $this->add('checkbox', 'load_defaults', ts('Load default error messages?'), '   (Recommended tor terminals)');
     $this->add('text', 'ap_name', ts('AP Name'),TRUE);
     $this->add('text', 'ap_short_name', ts('AP Short Name'));
     $this->add('text', 'ip_address', ts('IP Address'));
     $this->add('text', 'mac_address', ts('MAC Address'));
     $this->add('text', 'member_rate', ts('Member Rate'));
+    $this->add('text', 'idle_timeout', ts('Idle timeout'));
     $this->add('text', 'non_member_rate', ts('Non-Member Rate'));
-    $this->add('text', 'idle_timeout', ts('Idle Timeout'));
+    $this->add('text', 'dev', ts('Access Control Device under /dev/ *'));
+    $this->add('text', 'cmd', ts('Command to echo to device *'));
 
     // Parent  selector
     $this->addEntityRef('parent_id', ts('Parent AP'), [
