@@ -33,6 +33,9 @@ class CRM_Accessmanagement_Form_AccessPointView extends CRM_Core_Form {
     if (array_key_exists('non_member_rate', $accessPoint)) {
       $this->nonMemberRate = $accessPoint['non_member_rate'];
     }
+    if (array_key_exists('non_member_perdiem', $accessPoint)) {
+      $this->nonMemberPerdiem = $accessPoint['non_member_perdiem'];
+    }
     if (array_key_exists('idle_timeout', $accessPoint)) {
       $this->idleTimeout = $accessPoint['idle_timeout'];
     }
@@ -70,8 +73,9 @@ class CRM_Accessmanagement_Form_AccessPointView extends CRM_Core_Form {
       $this->add('text', 'ap_short_name', ts('AP Short Name'));
       $this->add('text', 'ip_address', ts('IP Address'));
       $this->add('text', 'mac_address', ts('MAC Address'));
-      $this->add('text', 'member_rate', ts('Member Rate'));
-      $this->add('text', 'non_member_rate', ts('Non-Member Rate'));
+      $this->add('text', 'member_rate', ts('Member Rate (Cents / Second)'));
+      $this->add('text', 'non_member_rate', ts('Non-Member Rate (Cents / Second)'));
+      $this->add('text', 'non_member_perdiem', ts('Non-Member Perdiem $'));
       $this->add('text', 'idle_timeout', ts('Idle Timeout'));
       $this->add('text', 'dev', ts('Access Control Device under /dev/'));
       $this->add('text', 'cmd', ts('Command to echo to ACD'));
@@ -123,6 +127,9 @@ class CRM_Accessmanagement_Form_AccessPointView extends CRM_Core_Form {
     }
     if (isset($this->nonMemberRate)) {
       $defaults['non_member_rate'] = $this->nonMemberRate;
+    }
+    if (isset($this->nonMemberPerdiem)) {
+      $defaults['non_member_perdiem'] = $this->nonMemberPerdiem;
     }
     if (isset($this->idleTimeout))  {
       $defaults['idle_timeout'] = $this->idleTimeout; 

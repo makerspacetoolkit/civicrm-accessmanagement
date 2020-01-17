@@ -37,6 +37,10 @@
       <td>{$form.non_member_rate.html}</td>
     </tr>
     <tr>
+      <td>{$form.non_member_perdiem.label}</td>
+      <td>{$form.non_member_perdiem.html}</td>
+    </tr>
+    <tr>
       <td>{$form.idle_timeout.label}</td>
       <td>{$form.idle_timeout.html}</td>
     </tr>

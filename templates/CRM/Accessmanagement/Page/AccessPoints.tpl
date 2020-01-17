@@ -36,10 +36,11 @@
     <th data-data="mac_address" cell-class="crm-accesspoints-mac_address" class='crm-accesspoints-mac_address'>{ts}Mac Address{/ts}</th>
     <th data-data="member_rate" cell-class="crm-accesspoints-member_rate" class='crm-accesspoints-member_rate'>{ts}Member Rate{/ts}</th>
     <th data-data="non_member_rate" cell-class="crm-accesspoints-non_member_rate" class='crm-accesspoints-non_member_rate'>{ts}Non-Member Rate{/ts}</th>
+    <th data-data="non_member_perdiem" cell-class="crm-accesspoints-non_member_perdeim" class='crm-accesspoints-non_member_perdiem'>{ts}Non-Mem. Perdiem{/ts}</th>
     <th data-data="parent_name" cell-class="crm-accesspoints-parent_name" class='crm-accesspoints-parent_name'>{ts}Parent AP{/ts}</th>
     <th data-data="idle_timeout" cell-class="crm-accesspoints-idle_timeout" class='crm-accesspoints-idle_timeout'>{ts}Idle Timeout{/ts}</th>
-    <th data-data="dev_cmd" cell-class="crm-accesspoints-dev_cmd" class='crm-accesspoints-dev_cmd'>{ts}Dev:Cmd{/ts}</th>
-    <th data-data="maintenance_mode" cell-class="crm-accesspoints-maintenance_mode" class='crm-accesspoints-maintenance_mode'>{ts}Maintenance Mode{/ts}</th>
+    <th data-data="dev_cmd" cell-class="crm-accesspoints-dev_cmd" class='crm-accesspoints-dev_cmd'>{ts}Dev :<br>Cmd{/ts}</th>
+    <th data-data="maintenance_mode" cell-class="crm-accesspoints-maintenance_mode" class='crm-accesspoints-maintenance_mode'>{ts}Maint. Mode{/ts}</th>
     <th data-data="error_codes" data-orderable="false" cell-class="crm-accesspoints-error_codes" class='crm-accesspoints-error_codes'>&nbsp;</th>
     <th data-data="edit" data-orderable="false" cell-class="crm-accesspoints-edit" class='crm-accesspoints-edit'>&nbsp;</th>
     <th data-data="delete" data-orderable="false" cell-class="crm-accesspoints-delete" class='crm-accesspoints-delete'>&nbsp;</th>
