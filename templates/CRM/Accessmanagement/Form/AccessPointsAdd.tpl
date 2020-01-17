@@ -1,6 +1,10 @@
 <div class="crm-form-block">
   <table class="form-layout">
     <tr>
+      <td>{$form.has_acd.label}</td>
+      <td>{$form.has_acd.html}</td>
+    </tr>
+    <tr>
       <td>{$form.is_ap_group.label}</td>
       <td>{$form.is_ap_group.html}</td>
     </tr>
@@ -40,6 +44,14 @@
       <td>{$form.parent_id.label}</td>
       <td>{$form.parent_id.html}</td>
     </tr>
+    <tr class="acd" style="display:false">
+      <td>{$form.dev.label}</td>
+      <td>{$form.dev.html}</td>
+    </tr>
+    <tr class="acd" style="display:false">
+      <td>{$form.cmd.label}</td>
+      <td>{$form.cmd.html}</td>
+    </tr>
     <tr>
       <td>{$form.maintenance_mode.label}</td>
       <td>{$form.maintenance_mode.html}</td>
@@ -51,13 +63,28 @@
 </div>
 {literal}
     <script type="text/javascript">
-
+      cj('.acd').hide();
+      cj('form#AccessPointsAdd').submit(function(e){
+      if(cj('#has_acd').prop('checked') && (cj('input#dev')[0].value === '' || cj('input#cmd')[0].value === '')) {
+        alert('Both Device and Command are requied with option checked.');
+	e.preventDefault();
+      }
+});
     function hideStandaloneOptions() {
 
       if (cj('#is_ap_group').prop('checked')) {
         cj('.standalone').hide();
       } else {
         cj('.standalone').show();
+      }
+    }
+
+    function showAcdOptions() {
+
+      if (cj('#has_acd').prop('checked')) {
+        cj('.acd').show();
+      } else {
+        cj('.acd').hide();
       }
     }
     </script>

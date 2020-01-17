@@ -28,16 +28,22 @@ class CRM_Accessmanagement_Form_AccessPointView extends CRM_Core_Form {
       $this->macAddress = $accessPoint['mac_address'];
     }
     if (array_key_exists('member_rate', $accessPoint)) {
-    $this->memberRate = $accessPoint['member_rate'];
+      $this->memberRate = $accessPoint['member_rate'];
     }
     if (array_key_exists('non_member_rate', $accessPoint)) {
-    $this->nonMemberRate = $accessPoint['non_member_rate'];
+      $this->nonMemberRate = $accessPoint['non_member_rate'];
     }
     if (array_key_exists('idle_timeout', $accessPoint)) {
-    $this->idleTimeout = $accessPoint['idle_timeout'];
+      $this->idleTimeout = $accessPoint['idle_timeout'];
     }
-    if (array_key_exists('parent_ap', $accessPoint)) {
-    $this->parentAp = $accessPoint['parent_ap'];
+   if (array_key_exists('dev', $accessPoint)) {
+      $this->dev = $accessPoint['dev'];
+    }
+    if (array_key_exists('cmd', $accessPoint)) {
+      $this->cmd = $accessPoint['cmd'];
+    }
+    if (array_key_exists('parent_id', $accessPoint)) {
+      $this->parentAp = $accessPoint['parent_id'];
     }
     $this->maintenanceMode = $accessPoint['maintenance_mode'];
     
@@ -67,6 +73,8 @@ class CRM_Accessmanagement_Form_AccessPointView extends CRM_Core_Form {
       $this->add('text', 'member_rate', ts('Member Rate'));
       $this->add('text', 'non_member_rate', ts('Non-Member Rate'));
       $this->add('text', 'idle_timeout', ts('Idle Timeout'));
+      $this->add('text', 'dev', ts('Access Control Device under /dev/'));
+      $this->add('text', 'cmd', ts('Command to echo to ACD'));
 
       // Parent  selector
      $this->addEntityRef('parent_id', ts('Parent AP'), [
@@ -119,8 +127,14 @@ class CRM_Accessmanagement_Form_AccessPointView extends CRM_Core_Form {
     if (isset($this->idleTimeout))  {
       $defaults['idle_timeout'] = $this->idleTimeout; 
     }
+    if (isset($this->dev))  {
+      $defaults['dev'] = $this->dev;
+    }
+    if (isset($this->cmd))  {
+      $defaults['cmd'] = $this->cmd;
+    }
     if (isset($this->parentAp)) {
-      $defaults['parent_ap'] = $this->parentAp; 
+      $defaults['parent_id'] = $this->parentAp; 
     }
     $defaults['maintenance_mode'] = $this->maintenanceMode;
 	  return $defaults;

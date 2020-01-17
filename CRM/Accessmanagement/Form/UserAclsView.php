@@ -23,9 +23,6 @@ class CRM_Accessmanagement_Form_UserAclsView extends CRM_Core_Form {
     if (array_key_exists('notes',$userAcl)) { 
       $this->notes = $userAcl['notes'];
     }
-    if ($this->action == 0) {
-	    $this->action = 2;
-    }
     $result['action'] = $this->action;  
     $result['delete'] = CRM_Core_Action::DELETE;  
     $result['update'] = CRM_Core_Action::UPDATE;  

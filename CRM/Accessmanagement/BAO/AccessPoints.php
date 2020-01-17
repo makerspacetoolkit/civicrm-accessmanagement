@@ -66,6 +66,18 @@ class CRM_Accessmanagement_BAO_AccessPoints extends CRM_Accessmanagement_DAO_Acc
 	    $accessPoint['idle_timeout'] = " ";  
     }	 	    
 
+    if (!array_key_exists('dev', $accessPoint)) {
+	    $accessPoint['dev_cmd'] = " ";
+    }
+
+    if (!array_key_exists('cmd', $accessPoint)) {
+	    $accessPoint['dev_cmd'] = " ";
+    }
+
+    if ((array_key_exists('dev', $accessPoint) && (array_key_exists('cmd', $accessPoint)))) {
+	    $accessPoint['dev_cmd'] = $accessPoint['dev'] . ":" . $accessPoint['cmd'];
+    }
+
     if (!array_key_exists('member_rate', $accessPoint)) {
 	    $accessPoint['member_rate'] = " ";  
     } elseif  	 	    

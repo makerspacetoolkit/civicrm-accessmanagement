@@ -8,7 +8,7 @@
  */
 class CRM_Accessmanagement_ExtensionUtil {
   const SHORT_NAME = "accessmanagement";
-  const LONG_NAME = "org.makerspacetoolkit.accessmanagement";
+  const LONG_NAME = "civicrm-accessmanagement";
   const CLASS_PREFIX = "CRM_Accessmanagement";
 
   /**

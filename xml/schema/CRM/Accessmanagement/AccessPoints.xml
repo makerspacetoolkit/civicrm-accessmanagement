@@ -88,6 +88,20 @@
   </field>
 
   <field>
+    <name>dev</name>
+    <type>varchar</type>
+    <length>64</length>
+    <comment>Access Control Device in /dev/</comment>
+  </field>
+
+  <field>
+    <name>cmd</name>
+    <type>varchar</type>
+    <length>16</length>
+    <comment>ACD command</comment>
+  </field>
+
+  <field>
     <name>maintenance_mode</name>
     <type>boolean</type>
     <default>false</default>
