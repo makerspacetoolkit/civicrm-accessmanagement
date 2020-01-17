@@ -67,6 +67,7 @@
             { data: "non_member_rate" },
             { data: "parent_name" },
             { data: "idle_timeout" },
+            { data: "dev_cmd" },
             { data: "maintenance_mode"},
             { data: "error_codes"},
             { data: "edit" },
