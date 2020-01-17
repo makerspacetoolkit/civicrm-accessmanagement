@@ -66,6 +66,7 @@
             { data: "mac_address" },
             { data: "member_rate" },
             { data: "non_member_rate" },
+            { data: "non_member_perdiem" },
             { data: "parent_name" },
             { data: "idle_timeout" },
             { data: "dev_cmd" },
