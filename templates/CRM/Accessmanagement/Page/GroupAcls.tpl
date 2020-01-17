@@ -45,12 +45,19 @@
 <script type="text/javascript">
     (function($) {
         var ZeroRecordText = {/literal}'{ts escape="js"}<div class="status messages">No Group ACLs have been created yet.{/ts}</div>'{literal};
-        $('table.crm-groupacls-selector').data({
+        $('table.crm-groupacls-selector').DataTable({
             "ajax": {
                 "url": {/literal}'{crmURL p="civicrm/ajax/groupaclslist" h=0}'{literal},
                 "data": function (d) {
                 }
             },
+            columns : [
+            { data: "civigroup_name" },
+            { data: "aco_name" },
+            { data: "status" },
+            { data: "edit" },
+            { data: "delete" },
+              ],
             "language": {
                 "zeroRecords": ZeroRecordText,
                 "emptyTable": ZeroRecordText

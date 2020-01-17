@@ -47,12 +47,19 @@
 <script type="text/javascript">
     (function($) {
         var ZeroRecordText = {/literal}'{ts escape="js"}<div class="status messages">No ACL items for this contact.{/ts}</div>'{literal};
-        $('table.crm-useracls-selector').data({
+        $('table.crm-useracls-selector').DataTable({
             "ajax": {
-                "url": {/literal}'{crmURL p="civicrm/ajax/useraclslist" h=0 q="snippet=4&cid=`$contactId`"}'{literal},
-                "data": function (d) {
-                }
+                "url": {/literal}'{crmURL p="civicrm/ajax/useraclslist" q="snippet=4&cid=`$contactId`" h=0}'{literal},
             },
+            columns : [
+            { data: "aco_name" },
+            { data: "certification_date" },
+            { data: "cert_by_name" },
+            { data: "notes" },
+            { data: "status"},
+            { data: "edit" },
+            { data: "delete" }
+              ],
             "language": {
                 "zeroRecords": ZeroRecordText,
                 "emptyTable": ZeroRecordText
@@ -73,12 +80,11 @@
                 //Reload table after draw
                 $(settings.nTable).trigger('crmLoad');
             }
-        });
+        });    
         $('#crm-container')
             .on('click', 'a.button, a.action-item[href*="action=update"], a.action-item[href*="action=delete"]', CRM.popup)
             .on('crmPopupFormSuccess', 'a.button, a.action-item[href*="action=update"], a.action-item[href*="action=delete"]', function() {
                 // Refresh datatable when form completes
-                $('table.crm-useracls-selector').DataTable().draw();
             });
     })(CRM.$);
 </script>

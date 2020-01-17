@@ -59,12 +59,6 @@ class CRM_Accessmanagement_Form_AccessPointsAdd extends CRM_Core_Form {
     parent::buildQuickForm();
   }
 
-  public function setDefaultValues() {
-    list($defaults['scheduled_date'], $defaults['scheduled_date_time']) = CRM_Utils_Date::setDateDefaults(date('Y-m-d'), 'activityDateTime');
-
-    return $defaults;
-  }
-
   public function postProcess() {
     
     $values = $this->exportValues();

@@ -14,8 +14,8 @@ class CRM_Accessmanagement_Page_AJAX {
       'status' => 'String',
       'notes' => 'String',
     );
-    $params = CRM_Core_Page_AJAX::defaultSortAndPagerParams();
-    $params += CRM_Core_Page_AJAX::validateParams($requiredParams, $optionalParams);
+ //   $params = CRM_Core_Page_AJAX::defaultSortAndPagerParams();
+ //   $params += CRM_Core_Page_AJAX::validateParams($requiredParams, $optionalParams);
 
     // get useracls list
     $userAcls = CRM_Accessmanagement_BAO_UserAcls::getUserAclsList($params);
@@ -34,8 +34,8 @@ class CRM_Accessmanagement_Page_AJAX {
       'aco' => 'String',
       'status_id' => 'String',
     );
-    $params = CRM_Core_Page_AJAX::defaultSortAndPagerParams();
-    $params += CRM_Core_Page_AJAX::validateParams($requiredParams, $optionalParams);
+//    $params = CRM_Core_Page_AJAX::defaultSortAndPagerParams();
+ //   $params += CRM_Core_Page_AJAX::validateParams($requiredParams, $optionalParams);
 
     // get groupacls list
     $groupAcls = CRM_Accessmanagement_BAO_GroupAcls::getGroupAclsList($params);
@@ -45,7 +45,7 @@ class CRM_Accessmanagement_Page_AJAX {
 
 
   public static function getAccessPoints() {
-    //$params = $_GET;
+//    $params = $_GET;
     $requiredParams = array(
       'cid' => 'String',
     );
@@ -60,15 +60,16 @@ class CRM_Accessmanagement_Page_AJAX {
       'maintenance_mode' => 'Integer',
       'parent_id' => 'String',
     );
-    try {
-    $params = CRM_Core_Page_AJAX::defaultSortAndPagerParams();
-    $params += CRM_Core_Page_AJAX::validateParams($requiredParams, $optionalParams);
-    }
-    catch (CiviCRM_API3_Exception $e) 
-    { echo 'fuck';
-    }
+ //   try {
+//    $params = CRM_Core_Page_AJAX::defaultSortAndPagerParams();
+//    $params += CRM_Core_Page_AJAX::validateParams($requiredParams, $optionalParams);
+//    }
+//    catch (CiviCRM_API3_Exception $e) 
+//    { 
+//       $params = $e->getMessage();
+//    }
     // get accesspoints list
-    $accessPoints = CRM_Accessmanagement_BAO_AccessPoints::getAccessPointsList($params);
+    $accessPoints = CRM_Accessmanagement_BAO_AccessPoints::getAccessPointsList();
     CRM_Utils_JSON::output($accessPoints);
   }
 
@@ -81,13 +82,13 @@ class CRM_Accessmanagement_Page_AJAX {
       'error_key' => 'String',
       'error_value' => 'String',
     );
-    try {
-    $params = CRM_Core_Page_AJAX::defaultSortAndPagerParams();
-    $params += CRM_Core_Page_AJAX::validateParams($requiredParams, $optionalParams);
-    }
-    catch (CiviCRM_API3_Exception $e)
-    { echo 'fuck';
-    }
+//    try {
+//    $params = CRM_Core_Page_AJAX::defaultSortAndPagerParams();
+//    $params += CRM_Core_Page_AJAX::validateParams($requiredParams, $optionalParams);
+//    }
+//    catch (CiviCRM_API3_Exception $e)
+//    { echo 'fuck';
+//    }
     // get ap errorcodes list
     $errorCodes = CRM_Accessmanagement_BAO_ApErrorCodes::getErrorCodesList($params);
     CRM_Utils_JSON::output($errorCodes);

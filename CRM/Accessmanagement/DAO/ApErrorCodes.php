@@ -134,7 +134,7 @@ class CRM_Accessmanagement_DAO_ApErrorCodes extends CRM_Core_DAO {
           'localizable' => 0,
         ],
       ];
-      CRM_Core_DAO_AllCoreTables::invoke(__CLASS__, 'fields_callback', Civi::$statics[__CLASS__]['fields']);
+//      CRM_Core_DAO_AllCoreTables::invoke(__CLASS__, 'fields_callback', Civi::$statics[__CLASS__]['fields']);
     }
     return Civi::$statics[__CLASS__]['fields'];
   }

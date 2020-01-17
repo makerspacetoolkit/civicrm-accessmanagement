@@ -51,12 +51,26 @@
 <script type="text/javascript">
     (function($) {
         var ZeroRecordText = {/literal}'{ts escape="js"}<div class="status messages">No Access Points have been created yet.{/ts}</div>'{literal};
-        $('table.crm-accesspoints-selector').data({
+        $('table.crm-accesspoints-selector').DataTable({
             "ajax": {
                 "url": {/literal}'{crmURL p="civicrm/ajax/accesspointslist" h=0"}'{literal},
                 "data": function (d) {
                 }
             },
+            columns : [
+            { data: "ap_name" },
+            { data: "ap_short_name" },
+            { data: "ip_address" },
+            { data: "mac_address" },
+            { data: "member_rate" },
+            { data: "non_member_rate" },
+            { data: "parent_name" },
+            { data: "idle_timeout" },
+            { data: "maintenance_mode"},
+            { data: "error_codes"},
+            { data: "edit" },
+            { data: "delete" }
+              ],
             "language": {
                 "zeroRecords": ZeroRecordText,
                 "emptyTable": ZeroRecordText
@@ -78,11 +92,11 @@
                 $(settings.nTable).trigger('crmLoad');
             }
         });
+        $('table.crm-accesspoints-selector').DataTable().draw();
         $('#crm-container')
             .on('click', 'a.button, a.action-item[href*="action=update"], a.action-item[href*="action=delete"]', CRM.popup)
             .on('crmPopupFormSuccess', 'a.button, a.action-item[href*="action=update"], a.action-item[href*="action=delete"]', function() {
                 // Refresh datatable when form completes
-                $('table.crm-accesspoints-selector').DataTable().draw();
             });
     })(CRM.$);
 </script>

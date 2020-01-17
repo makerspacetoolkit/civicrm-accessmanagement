@@ -44,12 +44,18 @@
 <script type="text/javascript">
     (function($) {
         var ZeroRecordText = {/literal}'{ts escape="js"}<div class="status messages">No Error Messages have been created yet.{/ts}</div>'{literal};
-        $('table.crm-errorcodes-selector').data({
+        $('table.crm-errorcodes-selector').DataTable({
             "ajax": {
                 "url": {/literal}'{crmURL p="civicrm/ajax/errorcodeslist" h=0 q="apid=`$accessPointId`"}'{literal},
                 "data": function (d) {
                 }
             },
+             columns : [
+            { data: "error_key" },
+            { data: "error_value"},
+            { data: "edit" },
+            { data: "delete" }
+              ],
             "language": {
                 "zeroRecords": ZeroRecordText,
                 "emptyTable": ZeroRecordText
@@ -71,11 +77,11 @@
                 $(settings.nTable).trigger('crmLoad');
             }
         });
+                $('table.crm-errorcodes-selector').DataTable().draw();
         $('#crm-container')
             .on('click', 'a.button, a.action-item[href*="action=update"], a.action-item[href*="action=delete"]', CRM.popup)
             .on('crmPopupFormSuccess', 'a.button, a.action-item[href*="action=update"], a.action-item[href*="action=delete"]', function() {
                 // Refresh datatable when form completes
-                $('table.crm-errorcodes-selector').DataTable().draw();
             });
     })(CRM.$);
 </script>
