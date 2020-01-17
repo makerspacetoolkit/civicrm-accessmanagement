@@ -1,4 +1,4 @@
-# civicrm-accessmanagement
+# civicrm-accessmanagement (
 Provides access control to physical resources.
 
 ![Screenshot](/images/screenshot.png)
@@ -9,8 +9,8 @@ The extension is licensed under [AGPL-3.0](LICENSE.txt).
 
 ## Requirements
 
-* PHP v7.0+
-* CiviCRM (*FIXME: Version number*)
+* PHP 5.6
+* CiviCRM 4.6
 
 ## Installation (Web UI)
 
