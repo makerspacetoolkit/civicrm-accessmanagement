@@ -82,6 +82,13 @@
   </field>
 
   <field>
+    <name>non_member_perdiem</name>
+    <type>decimal</type>
+    <length>20,2</length>
+    <default>0</default>
+  </field>
+
+  <field>
     <name>idle_timeout</name>
     <type>int unsigned</type>
     <default>null</default>

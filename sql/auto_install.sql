@@ -92,6 +92,7 @@ CREATE TABLE `civicrm_mstk_access_points` (
      `mac_address` varchar(17)    ,
      `member_rate` decimal(14,9)   DEFAULT 0 ,
      `non_member_rate` decimal(14,9)   DEFAULT 0 ,
+     `non_member_perdiem` decimal(20,2)   DEFAULT 0 ,
      `idle_timeout` int unsigned   DEFAULT null ,
      `dev` varchar(64)    COMMENT 'Access Control Device in /dev/',
      `cmd` varchar(16)    COMMENT 'ACD command',

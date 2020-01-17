@@ -93,6 +93,13 @@ class CRM_Accessmanagement_BAO_AccessPoints extends CRM_Accessmanagement_DAO_Acc
 	    $accessPoint['non_member_rate'] = "";
     }
      
+    if (!array_key_exists('non_member_perdiem', $accessPoint)) {
+      $accessPoint['non_member_perdiem'] = " ";
+    } elseif
+     ($accessPoint['non_member_perdiem'] == NULL || $accessPoint['non_member_perdiem'] == "0.000000000") {
+	    $accessPoint['non_member_perdiem'] = "";
+    }
+
       $accessPoint['status']= civicrm_api3('OptionValue', 'getvalue', [
         'return' => "label",
         'option_group_id' => "accessmanagement_status_type",
