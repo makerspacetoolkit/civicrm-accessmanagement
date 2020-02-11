@@ -70,14 +70,14 @@
   <field>
     <name>member_rate</name>
     <type>decimal</type>
-    <length>14,9</length>
+    <length>20,2</length>
     <default>0</default>
   </field>
 
   <field>
     <name>non_member_rate</name>
     <type>decimal</type>
-    <length>14,9</length>
+    <length>20,2</length>
     <default>0</default>
   </field>
 

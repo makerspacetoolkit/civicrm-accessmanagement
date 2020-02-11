@@ -33,8 +33,8 @@ class CRM_Accessmanagement_Form_AccessPointsAdd extends CRM_Core_Form {
     $this->add('text', 'ap_short_name', ts('AP Short Name'));
     $this->add('text', 'ip_address', ts('IP Address'));
     $this->add('text', 'mac_address', ts('MAC Address'));
-    $this->add('text', 'member_rate', ts('Member Rate  (Cents / Second)'));
-    $this->add('text', 'non_member_rate', ts('Non-Member Rate  (Cents / Second)'));
+    $this->add('text', 'member_rate', ts('Member Rate  (Currency / Minute)'));
+    $this->add('text', 'non_member_rate', ts('Non-Member Rate  (Currency / Minute)'));
     $this->add('text', 'non_member_perdiem', ts('Non-Member Perdiem $'));
     $this->add('text', 'idle_timeout', ts('Idle timeout'));
     $this->add('text', 'dev', ts('Access Control Device under /dev/ <b>*</b>'));
