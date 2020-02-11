@@ -81,7 +81,7 @@ class CRM_Accessmanagement_BAO_AccessPoints extends CRM_Accessmanagement_DAO_Acc
     if (!array_key_exists('member_rate', $accessPoint)) {
 	    $accessPoint['member_rate'] = " ";  
     } elseif  	 	    
-     ($accessPoint['member_rate'] == NULL || $accessPoint['member_rate'] == "0.000000000") {
+     ($accessPoint['member_rate'] == NULL || $accessPoint['member_rate'] == "0.00") {
       $accessPoint['member_rate'] = "";
     } 
      	    
@@ -89,14 +89,14 @@ class CRM_Accessmanagement_BAO_AccessPoints extends CRM_Accessmanagement_DAO_Acc
     if (!array_key_exists('non_member_rate', $accessPoint)) {
       $accessPoint['non_member_rate'] = " ";  
     } elseif 	 	    
-     ($accessPoint['non_member_rate'] == NULL || $accessPoint['non_member_rate'] == "0.000000000") {
+     ($accessPoint['non_member_rate'] == NULL || $accessPoint['non_member_rate'] == "0.00") {
 	    $accessPoint['non_member_rate'] = "";
     }
      
     if (!array_key_exists('non_member_perdiem', $accessPoint)) {
       $accessPoint['non_member_perdiem'] = " ";
     } elseif
-     ($accessPoint['non_member_perdiem'] == NULL || $accessPoint['non_member_perdiem'] == "0.000000000") {
+     ($accessPoint['non_member_perdiem'] == NULL || $accessPoint['non_member_perdiem'] == "0.00") {
 	    $accessPoint['non_member_perdiem'] = "";
     }
 
